@@ -1,0 +1,20 @@
+/* You can add global styles to this file, and also import other style files */
+@import '@angular/material/prebuilt-themes/deeppurple-amber.css';
+
+.orange-icon {
+  background-color: darkorange;
+  color: white;
+}
+.orange-icon svg {
+  background-color: darkorange;
+  color: white;
+}
+
+.blue-icon {
+  background-color: darkblue;
+  color: white;
+}
+.blue-icon svg {
+  background-color: darkblue;
+  color: white;
+}
