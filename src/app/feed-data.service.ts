@@ -1,17 +1,16 @@
-import {Injectable} from '@angular/core';
-import {Observable} from 'rxjs';
-import {HttpClient} from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
+import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
 
 @Injectable({
-  providedIn: 'root'
+    providedIn: 'root',
 })
 export class FeedDataService {
-  url = 'http://localhost:8080/feeditems/';
+    url = 'http://localhost:8080/feeditems/';
 
-  constructor(private http: HttpClient) {
-  }
+    constructor(private http: HttpClient) {}
 
-  getFeedData(): Observable<any> {
-    return this.http.get(`${this.url}`);
-  }
+    getFeedData(): Observable<any> {
+        return this.http.get(`${this.url}`);
+    }
 }

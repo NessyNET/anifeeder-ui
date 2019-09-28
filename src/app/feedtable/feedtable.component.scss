@@ -1,0 +1,14 @@
+table {
+    width: 100%;
+}
+td.mat-cell {
+    justify-content: left;
+    text-align: left;
+}
+.loader {
+    margin: 0;
+    top: 50%;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
