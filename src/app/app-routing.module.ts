@@ -1,13 +1,16 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { DownloadsComponent } from './downloads/downloads.component';
-import { FeedtableComponent } from './feedtable/feedtable.component';
+import { DownloadsContainerComponent } from './downloads/downloads-container.component';
+import { FeedsContainerComponent } from './feeds/feeds-container.component';
+import { RequestsContainerComponent } from './requests/requests-container.component';
 
+// TODO: Add lazy loaded routes
 const appRoutes: Routes = [
     { path: '', redirectTo: '/feeds', pathMatch: 'full' },
-    { path: 'feeds', component: FeedtableComponent },
-    { path: 'downloads', component: DownloadsComponent },
+    { path: 'feeds', component: FeedsContainerComponent },
+    { path: 'downloads', component: DownloadsContainerComponent },
+    { path: 'requests', component: RequestsContainerComponent },
 ];
 
 @NgModule({
