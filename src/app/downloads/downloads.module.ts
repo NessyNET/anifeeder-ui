@@ -7,12 +7,7 @@ import { DownloadsTableComponent } from './table/downloads-table.component';
 
 @NgModule({
     declarations: [DownloadsContainerComponent, DownloadsTableComponent],
-    imports: [
-        CommonModule,
-        DownloadsRoutingModule,
-        MatTableModule,
-        MatProgressSpinnerModule,
-    ],
-    exports: [DownloadsContainerComponent],
+    imports: [CommonModule, DownloadsRoutingModule, MatTableModule, MatProgressSpinnerModule],
+    exports: [DownloadsContainerComponent]
 })
 export class DownloadsModule {}

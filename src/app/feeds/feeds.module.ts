@@ -5,7 +5,7 @@ import {
     MatPaginatorModule,
     MatProgressSpinnerModule,
     MatTableModule,
-    MatTooltipModule,
+    MatTooltipModule
 } from '@angular/material';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { FeedsContainerComponent } from './feeds-container.component';
@@ -22,8 +22,8 @@ import { FeedsTableComponent } from './table/feeds-table.component';
         MatButtonModule,
         MatProgressSpinnerModule,
         FontAwesomeModule,
-        FeedsRoutingModule,
+        FeedsRoutingModule
     ],
-    exports: [FeedsContainerComponent],
+    exports: [FeedsContainerComponent]
 })
 export class FeedsModule {}

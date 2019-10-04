@@ -4,7 +4,7 @@ import { Observable } from 'rxjs';
 import { FeedItemResponse } from './feed-item.model';
 
 @Injectable({
-    providedIn: 'root',
+    providedIn: 'root'
 })
 export class FeedsService {
     url = 'api/feeditems/';

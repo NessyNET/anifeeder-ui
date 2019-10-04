@@ -1,10 +1,6 @@
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { library } from '@fortawesome/fontawesome-svg-core';
-import {
-    faDownload,
-    faQuestion,
-    faSave,
-} from '@fortawesome/free-solid-svg-icons';
+import { faDownload, faQuestion, faSave } from '@fortawesome/free-solid-svg-icons';
 import { Observable } from 'rxjs';
 import { shareReplay, take, tap } from 'rxjs/operators';
 import { TorrentService } from '../core/torrent';
@@ -15,15 +11,12 @@ import { FeedsService } from './feed.service';
     selector: 'app-feeds-container',
     templateUrl: './feeds-container.component.html',
     styleUrls: ['./feeds-container.component.scss'],
-    changeDetection: ChangeDetectionStrategy.OnPush,
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class FeedsContainerComponent implements OnInit {
     feedData$: Observable<FeedItemResponse>;
     loading = true;
-    constructor(
-        private _feedsService: FeedsService,
-        private _torrentService: TorrentService
-    ) {}
+    constructor(private _feedsService: FeedsService, private _torrentService: TorrentService) {}
 
     ngOnInit() {
         library.add(faDownload, faSave, faQuestion);

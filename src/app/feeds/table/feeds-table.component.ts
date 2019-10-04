@@ -1,11 +1,4 @@
-import {
-    ChangeDetectionStrategy,
-    Component,
-    Input,
-    OnChanges,
-    SimpleChanges,
-    ViewChild,
-} from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input, OnChanges, SimpleChanges, ViewChild } from '@angular/core';
 import { MatPaginator, MatSort, MatTableDataSource } from '@angular/material';
 import { FeedItem, FeedItemResponse } from '../feed-item.model';
 
@@ -13,20 +6,13 @@ import { FeedItem, FeedItemResponse } from '../feed-item.model';
     selector: 'app-feeds-table',
     templateUrl: './feeds-table.component.html',
     styleUrls: ['./feeds-table.component.scss'],
-    changeDetection: ChangeDetectionStrategy.OnPush,
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class FeedsTableComponent implements OnChanges {
     @Input() feedData: FeedItemResponse;
     @ViewChild(MatPaginator, { static: false }) paginator: MatPaginator;
     @ViewChild(MatSort, { static: false }) sort: MatSort;
-    displayedColumns: string[] = [
-        'publishDate',
-        'dateAdded',
-        'title',
-        'request',
-        'downremote',
-        'downlocal',
-    ];
+    displayedColumns: string[] = ['publishDate', 'dateAdded', 'title', 'request', 'downremote', 'downlocal'];
     dataSource: MatTableDataSource<FeedItem>;
     resultsLength: number;
     constructor() {}

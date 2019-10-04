@@ -6,6 +6,6 @@ import { RequestsRoutingModule } from './requests-routing.module';
 @NgModule({
     declarations: [RequestsContainerComponent],
     imports: [CommonModule, RequestsRoutingModule],
-    exports: [RequestsContainerComponent],
+    exports: [RequestsContainerComponent]
 })
 export class RequestsModule {}

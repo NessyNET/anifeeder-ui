@@ -2,7 +2,4 @@
     <mat-spinner></mat-spinner>
 </div>
 
-<app-downloads-table
-    *ngIf="torrentData$ | async"
-    [torrentData]="torrentData$ | async"
-></app-downloads-table>
+<app-downloads-table *ngIf="torrentData$ | async" [torrentData]="torrentData$ | async"></app-downloads-table>

@@ -1,6 +1,16 @@
 {
-    "trailingComma": "es5",
+    "trailingComma": "none",
     "tabWidth": 4,
-    "semi": false,
-    "singleQuote": true
+    "semi": true,
+    "singleQuote": true,
+    "printWidth": 120,
+    "overrides": [
+        {
+            "files": "*.json",
+            "options": {
+                "parser": "json",
+                "singleQuote": false
+            }
+        }
+    ]
 }

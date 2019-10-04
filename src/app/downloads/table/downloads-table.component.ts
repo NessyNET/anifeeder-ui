@@ -1,11 +1,4 @@
-import {
-    ChangeDetectionStrategy,
-    Component,
-    Input,
-    OnChanges,
-    SimpleChanges,
-    ViewChild,
-} from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input, OnChanges, SimpleChanges, ViewChild } from '@angular/core';
 import { MatSort, MatTableDataSource } from '@angular/material';
 import { TorrentData } from 'src/app/core/torrent/';
 
@@ -13,7 +6,7 @@ import { TorrentData } from 'src/app/core/torrent/';
     selector: 'app-downloads-table',
     templateUrl: './downloads-table.component.html',
     styleUrls: ['./downloads-table.component.scss'],
-    changeDetection: ChangeDetectionStrategy.OnPush,
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class DownloadsTableComponent implements OnChanges {
     @Input() torrentData: TorrentData[];

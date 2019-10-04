@@ -6,24 +6,21 @@ const appRoutes: Routes = [
     { path: '', redirectTo: '/feeds', pathMatch: 'full' },
     {
         path: 'feeds',
-        loadChildren: () =>
-            import('./feeds/feeds.module').then(m => m.FeedsModule),
+        loadChildren: () => import('./feeds/feeds.module').then(m => m.FeedsModule)
     },
     {
         path: 'downloads',
-        loadChildren: () =>
-            import('./downloads/downloads.module').then(m => m.DownloadsModule),
+        loadChildren: () => import('./downloads/downloads.module').then(m => m.DownloadsModule)
     },
     {
         path: 'requests',
-        loadChildren: () =>
-            import('./requests/requests.module').then(m => m.RequestsModule),
-    },
+        loadChildren: () => import('./requests/requests.module').then(m => m.RequestsModule)
+    }
 ];
 
 @NgModule({
     declarations: [],
     imports: [CommonModule, RouterModule.forRoot(appRoutes)],
-    exports: [RouterModule],
+    exports: [RouterModule]
 })
 export class AppRoutingModule {}

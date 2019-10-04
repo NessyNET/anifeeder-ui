@@ -1,10 +1,4 @@
-<table
-    mat-table
-    matSort
-    [dataSource]="dataSource"
-    class="mat-elevation-z8"
-    [hidden]="loading"
->
+<table mat-table matSort [dataSource]="dataSource" class="mat-elevation-z8" [hidden]="loading">
     <ng-container matColumnDef="dateAdded">
         <th mat-header-cell *matHeaderCellDef mat-sort-header>
             Downloaded Date

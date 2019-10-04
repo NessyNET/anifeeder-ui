@@ -7,7 +7,7 @@ import { TorrentData } from './torrent-data.model';
 import { TorrentDownloadRequest } from './torrent-download-request.model';
 
 @Injectable({
-    providedIn: 'root',
+    providedIn: 'root'
 })
 export class TorrentService {
     url = 'api/torrents/';
@@ -19,9 +19,7 @@ export class TorrentService {
             map(torrentData =>
                 torrentData.map(data => ({
                     ...data,
-                    humanReadableSize: this._parseBytesToHumanReadable(
-                        data.sizeBytes
-                    ),
+                    humanReadableSize: this._parseBytesToHumanReadable(data.sizeBytes)
                 }))
             )
         );
@@ -32,21 +30,18 @@ export class TorrentService {
         const request: TorrentDownloadRequest = {
             feed,
             id,
-            requestTimestamp: new Date(),
+            requestTimestamp: new Date()
         };
         const httpOptions = {
             headers: new HttpHeaders({
-                'Content-Type': 'application/json',
-            }),
+                'Content-Type': 'application/json'
+            })
         };
         // TODO: Check this response
         this._http.post(this.url, request, httpOptions);
     }
 
-    private _parseBytesToHumanReadable(
-        bytes: number,
-        si: boolean = false
-    ): string {
+    private _parseBytesToHumanReadable(bytes: number, si: boolean = false): string {
         const threshold = si ? 1000 : 1024;
         if (Math.abs(bytes) < threshold) {
             return bytes + ' B';

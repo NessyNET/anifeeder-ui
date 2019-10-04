@@ -4,6 +4,7 @@
     "scripts": {
         "ng": "ng",
         "start": "ng serve --proxy-config proxy.config.json",
+        "prettier": "prettier --write \" ./src/{app,environment,assets}/**/*.{scss,ts,json,html}\"",
         "build": "ng build",
         "test": "jest",
         "lint": "ng lint",
