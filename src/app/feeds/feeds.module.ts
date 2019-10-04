@@ -9,6 +9,7 @@ import {
 } from '@angular/material';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { FeedsContainerComponent } from './feeds-container.component';
+import { FeedsRoutingModule } from './feeds-routing.module';
 import { FeedsTableComponent } from './table/feeds-table.component';
 
 @NgModule({
@@ -21,6 +22,7 @@ import { FeedsTableComponent } from './table/feeds-table.component';
         MatButtonModule,
         MatProgressSpinnerModule,
         FontAwesomeModule,
+        FeedsRoutingModule,
     ],
     exports: [FeedsContainerComponent],
 })
