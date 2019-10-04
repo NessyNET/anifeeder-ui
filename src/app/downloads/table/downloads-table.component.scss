@@ -1,0 +1,14 @@
+table {
+    width: 100%;
+}
+td.mat-cell {
+    justify-content: left;
+    text-align: left;
+}
+.mat-row:nth-child(even) {
+    background-color: white;
+}
+
+.mat-row:nth-child(odd) {
+    background-color: lightgrey;
+}

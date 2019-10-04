@@ -1,0 +1,5 @@
+<div class="loader" *ngIf="loading">
+    <mat-spinner></mat-spinner>
+</div>
+
+<app-feeds-table *ngIf="feedData$ | async" [feedData]="feedData$ | async"></app-feeds-table>
